@@ -1,0 +1,55 @@
+#!/bin/bash
+# create_career_structure.sh
+
+
+BASE="$HOME/Career"
+
+mkdir -p "$BASE/JobApplications"
+
+mkdir -p "$BASE/Resumes"
+
+mkdir -p "$BASE/Certificates"
+
+mkdir -p "$BASE/Projects"
+
+mkdir -p "$BASE/Hackathons"
+
+
+# Create a jobs.csv with header if not present
+
+JOBS="$BASE/JobApplications/jobs.csv"
+
+if [ ! -f "$JOBS" ]; then
+
+echo "id,date_applied,company,role,status,followup_date,notes" > "$JOBS"
+
+echo "Created $JOBS"
+
+else
+
+echo "$JOBS already exists"
+
+fi
+
+
+# Create a sample README and .gitignore
+
+echo "# Career folder for Arpit" > "$BASE/README.md"
+
+echo "jobs.csv" > "$BASE/.gitignore"
+
+
+# Show tree for user verification
+
+if command -v tree >/dev/null 2>&1; then
+
+tree "$BASE" || true
+
+else
+
+ls -R "$BASE"
+
+fi
+
+
+exit 0
