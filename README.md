@@ -137,8 +137,9 @@ GitHub: https://github.com/arpitpaatni2007-jpg
 
 
 
-📬 Contact
+# 📬 Contact
 
 
 Arpit – B.Tech CSE (AI & ML)
+
 Email: arpitpaatni2007@gmail.com
